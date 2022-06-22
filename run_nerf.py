@@ -497,6 +497,8 @@ def config_parser():
                         help='specific weights npy file to reload for coarse network')
     parser.add_argument("--random_seed", type=int, default=None,
                         help='fix random seed for repeatability')
+    parser.add_argument("--N_iters", type=int, default=1000000,
+                        help='num of steps. Google set this to hard-coded 1M')
     
     # pre-crop options
     parser.add_argument("--precrop_iters", type=int, default=0,
@@ -743,7 +745,8 @@ def train():
         print('done')
         i_batch = 0
 
-    N_iters = 1000000
+    # Eric: make num of iterations configurable
+    N_iters = args.N_iters
     print('Begin')
     print('TRAIN views are', i_train)
     print('TEST views are', i_test)
