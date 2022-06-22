@@ -7,8 +7,5 @@
 *.dae
 data/*
 logs/*
-<<<<<<< HEAD
 logs
-=======
 data
->>>>>>> 2b5359356f6f6a9c4406f685d4f6b0ff897a5e45
