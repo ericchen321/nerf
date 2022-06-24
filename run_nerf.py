@@ -695,6 +695,8 @@ def train():
 
         rgbs, _ = render_path(render_poses, hwf, args.chunk, render_kwargs_test,
                               gt_imgs=images, savedir=testsavedir, render_factor=args.render_factor)
+        psnr = mse2psnr(img2mse(tf.constant(images), tf.constant(rgbs)))                                     
+        print(f'PSNR: {psnr}')
         print('Done rendering', testsavedir)
         imageio.mimwrite(os.path.join(testsavedir, 'video.mp4'),
                          to8b(rgbs), fps=30, quality=8)
