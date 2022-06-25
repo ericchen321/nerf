@@ -1,11 +1,12 @@
 #!/bin/bash
 
-dataset_name="$1"
-scene_name="$2"
-i_img="$3"
-N_iters="$4"
+exp_category="$1"
+dataset_name="$2"
+scene_name="$3"
+i_img="$4"
+N_iters="$5"
 
 python run_nerf.py \
-    --config paper_configs/${dataset_name}_configs/${scene_name}.txt \
+    --config ${exp_category}_configs/${dataset_name}_configs/${scene_name}.txt \
     --i_img=$i_img \
     --N_iters $N_iters
