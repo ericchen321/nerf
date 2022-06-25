@@ -756,7 +756,7 @@ def train():
 
     # Summary writers
     writer = tf.contrib.summary.create_file_writer(
-        os.path.join(basedir, 'summaries', expname))
+        os.path.join(basedir, expname, 'summaries'))
     writer.set_as_default()
 
     for i in range(start, N_iters):
