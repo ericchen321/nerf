@@ -13,5 +13,5 @@ declare -a scene_names=(
     )
 
 for scene_name in ${scene_names[@]}; do
-    python run_nerf.py --config paper_configs/${scene_name}.txt --i_img=10000
+    python run_nerf.py --config paper_configs/${scene_name}.txt --i_img=10000 --N_iters 200000
 done
