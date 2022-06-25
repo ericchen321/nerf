@@ -1,0 +1,5 @@
+numpy==1.20.2
+tensorflow-gpu==1.15.0
+configargparse==1.5.3
+tensorboard==1.15.0
+matplotlib==3.4.2
