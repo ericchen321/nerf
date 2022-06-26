@@ -748,7 +748,7 @@ def train():
         i_batch = 0
 
     # Eric: make num of iterations configurable
-    N_iters = args.N_iters
+    N_iters = args.N_iters + 1 # add one more step to save the final model
     print('Begin')
     print('TRAIN views are', i_train)
     print('TEST views are', i_test)
