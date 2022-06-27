@@ -12,4 +12,4 @@ module load imagemagick
 cd /home/gxc321/
 source NerfEnv/bin/activate
 cd /home/gxc321/scratch/nerf/
-source scripts/train.sh paper blender lego 20000 1000000
+source scripts/train.sh paper blender lego 20000 1000000 32768 65536
