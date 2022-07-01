@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --time=08:00:00
 #SBATCH --account=def-rhodin
-#SBATCH --job-name=te_chair_nerf-tf
+#SBATCH --job-name=te_nerf-tf
 #SBATCH --gres=gpu:v100l:1
 #SBATCH --mem=24G
 module load StdEnv/2016.4
