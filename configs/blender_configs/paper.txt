@@ -1,10 +1,10 @@
-# This replicates the paper result for "hotdog"
+# This replicates the paper result for "Lego"
 # when trained to 500k iters. Settings are the 
 # same for all other synthetic blender scenes.
 
-expname = blender_paper_hotdog
+expname = blender_paper_lego
 basedir = ./logs
-datadir = ./data/nerf_synthetic/hotdog
+datadir = ./data/nerf_synthetic/lego
 dataset_type = blender
 
 no_batching = True
