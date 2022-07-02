@@ -1,18 +1,18 @@
 #!/bin/bash
 
 exp_category="paper"
-dataset_name="blender"
+dataset_name="llff"
 
 # define scene names
 declare -a scene_names=(
-    "chair"
-    "drums"
-    "ficus"
-    "hotdog"
-    "lego"
-    "materials"
-    "mic"
-    "ship"
+    "fern"
+    "flower"
+    "fortress"
+    "horns"
+    "leaves"
+    "orchids"
+    "room"
+    "trex"
     )
 
 for scene_name in ${scene_names[@]}; do

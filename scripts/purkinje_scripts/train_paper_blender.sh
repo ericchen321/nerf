@@ -19,10 +19,6 @@ declare -a scene_names=(
     )
 
 for scene_name in ${scene_names[@]}; do
-    python run_nerf.py \
-    --config configs/${exp_category}_configs/${dataset_name}_configs/${scene_name}.txt \
-    --i_img=$i_img \
-    --N_iters $N_iters \
-    --chunk=8192 \
-    --netchunk=16384
+    source scripts/train.sh \
+    $exp_category $dataset_name $scene_name $i_img $N_iters 8192 16384
 done
