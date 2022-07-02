@@ -2,8 +2,6 @@
 
 i_img="$1"
 N_iters="$2"
-chunk="$3"
-netchunk="$4"
 
 exp_category="paper"
 dataset_name="blender"
@@ -25,6 +23,6 @@ for scene_name in ${scene_names[@]}; do
     --config configs/${exp_category}_configs/${dataset_name}_configs/${scene_name}.txt \
     --i_img=$i_img \
     --N_iters $N_iters \
-    --chunk=$chunk \
-    --netchunk=$netchunk
+    --chunk=8192 \
+    --netchunk=16384
 done
