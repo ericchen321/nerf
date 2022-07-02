@@ -26,5 +26,5 @@ declare -a scene_names=(
     )
 
 for scene_name in ${scene_names[@]}; do
-    source scripts/test.sh paper blender $scene_name
+    source scripts/test.sh paper blender $scene_name 1000000
 done

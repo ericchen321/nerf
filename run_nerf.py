@@ -450,8 +450,13 @@ def create_nerf(args):
         print('Resetting step to', start)
 
         if model_fine is not None:
-            ft_weights_fine = '{}_fine_{}'.format(
-                ft_weights[:-11], ft_weights[-10:])
+            if ft_weights[-11] != '0':
+                # if >= 1M steps
+                ft_weights_fine = '{}_fine_{}'.format(
+                    ft_weights[:-12], ft_weights[-11:])
+            else:
+                ft_weights_fine = '{}_fine_{}'.format(
+                    ft_weights[:-11], ft_weights[-10:])
             print('Reloading fine from', ft_weights_fine)
             model_fine.set_weights(np.load(ft_weights_fine, allow_pickle=True))
 
