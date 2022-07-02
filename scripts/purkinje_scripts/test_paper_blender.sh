@@ -12,7 +12,7 @@ declare -a scene_names=(
     "lego"
     "materials"
     "mic"
-    "shape"
+    "ship"
     )
 
 for scene_name in ${scene_names[@]}; do

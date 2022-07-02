@@ -9,8 +9,10 @@ chunk="$6"
 netchunk="$7"
 
 python run_nerf.py \
-    --config configs/${exp_category}_configs/${dataset_name}_configs/${scene_name}.txt \
+    --config configs/${exp_category}_configs/${dataset_name}_configs/${dataset_name}_config.txt \
     --i_img=$i_img \
     --N_iters $N_iters \
     --chunk=$chunk \
-    --netchunk=$netchunk
+    --netchunk=$netchunk \
+    --expname=llff_paper_$scene_name \
+    --datadir=./data/nerf_llff_data/$scene_name
